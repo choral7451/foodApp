@@ -1,0 +1,3 @@
+function getRank() {
+  alert('asd');
+}
