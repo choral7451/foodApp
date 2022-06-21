@@ -17,17 +17,6 @@ body {
   width: 100vw;
 }
 
-header {
-  font-family: 'arirang';
-  text-align: center;
-  color: black;
-  margin-top: 5px;
-  font-size: 60px;
-  height: initial;
-  width: 100%;
-  background-color: blue;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -38,45 +27,97 @@ header {
   background-color: yellow;
 }
 
+.logoBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 10%;
+  width: 100%;
+  background-color: blue;
+}
+
+.logo {
+  font-family: 'arirang';
+  font-size: 40px;
+  color: black;
+}
+
 section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 85%;
 }
 
 .count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'arirangHon';
+  height: 10%;
   font-size: 30px;
-  margin: 20px 0;
+  background-color: beige;
 }
 
+.name {
+  height: 5%;
+  font-size: 20px;
+  margin: 1px 0;
+}
+
+.image {
+  height: 60%;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
 .ctrl {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 25%;
   width: 100%;
 }
 
-input {
+.input {
+  display: none;
   text-align: center;
-  height: 50px;
+  height: 30%;
   width: 80%;
-  margin: 20px 0;
 }
 
-.mainBtn {
+.startBtn {
+  display: initial;
   font-family: 'arirangHon';
   background-color: white;
   border: 2px solid black;
   cursor: pointer;
   box-shadow: 10px 10px grey;
   font-size: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
   border-radius: 15px;
   width: 80%;
-  height: 50px;
+  height: 40%;
+}
+
+.submitBtn {
+  display: none;
+  font-family: 'arirangHon';
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 10px 10px grey;
+  font-size: 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  width: 80%;
+  height: 40%;
 }
 
 .mainBtn:hover {

@@ -1,6 +1,6 @@
-import { Controller, Get, Post, Render } from '@nestjs/common';
+import { Controller, Get, Post, Render, Req } from '@nestjs/common';
 import { EstimationService } from './estimation.service';
-
+import { Request } from 'express';
 @Controller()
 export class EstimationController {
   constructor(private readonly estimationService: EstimationService) {}
@@ -12,7 +12,16 @@ export class EstimationController {
   }
 
   @Post('/estimation')
-  start() {
-    return this.estimationService.get();
+  async start() {
+    return await this.estimationService.get();
+  }
+
+  @Post('/getData')
+  async getData(
+    @Req() req: Request, //
+  ) {
+    console.log('asdasd');
+    console.log();
+    return await this.estimationService.getData({ req });
   }
 }

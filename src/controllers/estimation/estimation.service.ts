@@ -12,20 +12,32 @@ export class EstimationService {
 
   async get() {
     let arr = [];
-    let result = [];
     const count = await this.imagesRepository.count();
 
     while (arr.length < 10) {
       const id = Math.ceil(Math.random() * count);
       if (!arr.includes(id)) {
-        const data = await this.imagesRepository.findOneBy({
-          id,
-        });
         arr.push(id);
       }
     }
-    console.log(result);
+
+    const data = await this.imagesRepository.findOneBy({
+      id: arr[0],
+    });
+
+    const result = {
+      arr,
+      data,
+    };
 
     return result;
+  }
+
+  async getData({ req }) {
+    const data = await this.imagesRepository.findOneBy({
+      id: req.body.id,
+    });
+
+    return data;
   }
 }

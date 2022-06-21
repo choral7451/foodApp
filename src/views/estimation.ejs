@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,18 +14,19 @@
   </head>
   <body>
     <div class="main">
-      <header>진품먹품</header>
+      <div class="logoBack">
+        <a href="/" class="logo">진품먹품</a>
+      </div>
       <section>
         <div class="count" id="count">2:00</div>
+        <div class="name" id="name">서울 - 깁밥</div>
         <div class="image">
-          <img
-            src="https://storage.googleapis.com/choral_foodapp/%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%AE%E1%84%90%E1%85%A9%E1%84%86%E1%85%A1%E1%84%8F%E1%85%B5.png"
-            alt=""
-          />
+          <img id="img" src="/images/logo.png" alt="" />
         </div>
         <div class="ctrl">
-          <input type="text" />
-          <button class="mainBtn" onclick="start()">시 작</button>
+          <input type="text" class="input" id="input" />
+          <button class="startBtn" id="start" onclick="start()">시 작</button>
+          <button class="submitBtn" id="submit" onclick="check()">확 인</button>
         </div>
       </section>
     </div>

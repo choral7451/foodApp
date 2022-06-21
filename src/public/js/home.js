@@ -1,3 +1,0 @@
-function getRank() {
-  alert('asd');
-}
